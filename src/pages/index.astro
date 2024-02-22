@@ -131,6 +131,30 @@ import Layout from "../layouts/Layout.astro";
           <div class="projects-wrapper">
             <div class="project">
               <div class="project-language">Typescript</div>
+              <h3>Social Media App</h3>
+              <p>
+                In Social Media App, without signing in, you can only see a list
+                of all users. Sign in to see user's profile and posts, who they
+                follow and who follows them. You can create posts, comment and
+                like posts, and follow other users.
+              </p>
+              <div class="project-buttons">
+                <a
+                  href="https://master--my-social-media-app1.netlify.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><button type="button">Live link</button></a
+                >
+                <a
+                  href="https://github.com/DraganAleksic99/eStore"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  ><button type="button">Github</button></a
+                >
+              </div>
+            </div>
+            <div class="project">
+              <div class="project-language">Typescript</div>
               <h3>eStore</h3>
               <p>
                 eStore is an online store that has a product catalog that
@@ -364,6 +388,7 @@ import Layout from "../layouts/Layout.astro";
 
   .project-buttons {
     margin-top: 8px;
+    pointer-events: auto;
   }
 
   .project-buttons button {
@@ -375,7 +400,6 @@ import Layout from "../layouts/Layout.astro";
 
   .project-buttons button:hover {
     transform: scale(1.05);
-    cursor: pointer;
   }
 
   .project-language {
