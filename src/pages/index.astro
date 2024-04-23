@@ -1,5 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Project from "../components/Project.astro";
 ---
 
 <script>
@@ -128,111 +129,57 @@ import Layout from "../layouts/Layout.astro";
         <div id="projects">
           <h2>my projects</h2>
           <div class="projects-wrapper">
-            <div class="project">
-              <div class="project-language">Typescript • Fullstack</div>
-              <h3>Social Media App</h3>
-              <p>
-                In Social Media App, without signing in, you can only see a list
-                of all users. Sign in to see user's profile and posts, who they
-                follow and who follows them. You can create posts, comment and
-                like posts, and follow other users.
-              </p>
-              <div class="project-buttons">
-                <a
-                  href="https://my-social-media-app1.netlify.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><button type="button">Live link</button></a
-                >
-              </div>
-            </div>
-            <div class="project">
-              <div class="project-language">Typescript • Fullstack</div>
-              <h3>Admin Dashboard</h3>
-              <p>
-                In Admin Dasboard you need to login to your account to see a
-                chart of your sales and manage your products and events. You can
-                also manage your account information.
-              </p>
-              <div class="project-buttons">
-                <a
-                  href="https://my-admin-dashboard-app.netlify.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><button type="button">Live link</button></a
-                >
-              </div>
-            </div>
-            <div class="project">
-              <div class="project-language">Typescript • Frontend</div>
-              <h3>eStore</h3>
-              <p>
-                eStore is an online store that has a product catalog that
-                customers can browse by category and page, a shopping cart where
-                users can add and remove products, and a checkout where
-                customers can enter their details and place their orders.
-              </p>
-              <div class="project-buttons">
-                <a
-                  href="https://my-estore-website.netlify.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><button type="button">Live link</button></a
-                >
-              </div>
-            </div>
-            <div class="project">
-              <div class="project-language">Typescript • Frontend</div>
-              <h3>Trello Clone</h3>
-              <p>
-                In Trello-clone, you can create tasks and organize them into
-                lists. You can drag and drop both cards and lists to reorder
-                them.
-              </p>
-              <div class="project-buttons">
-                <a
-                  href="https://my-trello-clone-website.netlify.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><button type="button">Live link</button></a
-                >
-              </div>
-            </div>
-            <div class="project">
-              <div class="project-language">Typescript • Frontend</div>
-              <h3>Redux Paint</h3>
-              <p>
-                Redux-paint is a drawing board. You can pick different colors
-                and draw lines. If you don't like the results you can “undo” and
-                "redo" your actions. When you are satisfied with the results you
-                can export the image as a .png file.
-              </p>
-              <div class="project-buttons">
-                <a
-                  href="https://my-redux-paint-website.netlify.app/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><button type="button">Live link</button></a
-                >
-              </div>
-            </div>
-            <div class="project">
-              <div class="project-language">html/css/js</div>
-              <h3>Ensome</h3>
-              <p>
-                Ensome is a clean and modern website targeting a wide variety of
-                use cases for cloud technologies, IT businesses, startups,
-                machine learning, data science businesses, etc.
-              </p>
-              <div class="project-buttons">
-                <a
-                  href="https://draganaleksic99.github.io/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><button type="button">Live link</button></a
-                >
-              </div>
-            </div>
+            <Project
+              title="Social Media App"
+              url="https://my-social-media-app1.netlify.app/"
+            >
+              In Social Media App, without signing in, you can only see a list
+              of all users. Sign in to see user's profile and posts, who they
+              follow and who follows them. You can create posts, comment and
+              like posts, and follow other users.</Project
+            >
+            <Project
+              title="Admin Dashboard"
+              url="https://my-admin-dashboard-app.netlify.app/"
+            >
+              In Admin Dasboard you need to login to your account to see a chart
+              of your sales and manage your products and events. You can also
+              manage your account information.</Project
+            >
+            <Project
+              title="eStore"
+              url="https://my-estore-website.netlify.app/"
+            >
+              eStore is an online store that has a product catalog that
+              customers can browse by category and page, a shopping cart where
+              users can add and remove products, and a checkout where customers
+              can enter their details and place their orders.</Project
+            >
+            <Project
+              title="Trello Clone"
+              url="https://my-trello-clone-website.netlify.app/"
+            >
+              In Trello-clone, you can create tasks and organize them into
+              lists. You can drag and drop both cards and lists to reorder them.</Project
+            >
+            <Project
+              title="Redux Paint"
+              url="https://my-redux-paint-website.netlify.app/"
+            >
+              Redux-paint is a drawing board. You can pick different colors and
+              draw lines. If you don't like the results you can “undo” and
+              "redo" your actions. When you are satisfied with the results you
+              can export the image as a .png file.
+            </Project>
+            <Project
+              title="Ensome"
+              url="https://draganaleksic99.github.io/"
+              lang="html/css/js"
+            >
+              Ensome is a clean and modern website targeting a wide variety of
+              use cases for cloud technologies, IT businesses, startups, machine
+              learning, data science businesses, etc.
+            </Project>
           </div>
         </div>
       </div>
@@ -359,40 +306,6 @@ import Layout from "../layouts/Layout.astro";
     padding-top: 1rem;
   }
 
-  .projects-wrapper .project {
-    background-color: #647eff;
-    margin-bottom: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.3);
-    -webkit-box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.3);
-    -moz-box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.3);
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-    padding: 1rem;
-  }
-
-  .project-buttons {
-    margin-top: 8px;
-    pointer-events: auto;
-  }
-
-  .project-buttons button {
-    border-radius: 8px;
-    cursor: pointer;
-    padding: 4px 8px;
-    margin-right: 8px;
-  }
-
-  .project-buttons button:hover {
-    transform: scale(1.05);
-  }
-
-  .project-language {
-    text-transform: uppercase;
-    letter-spacing: 5px;
-  }
-
   .links-wrapper .link {
     display: inline-flex;
     align-items: center;
@@ -426,16 +339,7 @@ import Layout from "../layouts/Layout.astro";
     .skills-wrapper div {
       font-size: 1.25rem;
     }
-    .projects-wrapper .project {
-      padding: 1.5rem;
-    }
-    .project p {
-      font-size: 1.25rem;
-    }
 
-    .project h3 {
-      font-size: 1.5rem;
-    }
     .links-wrapper .link {
       font-size: 1.25rem;
     }

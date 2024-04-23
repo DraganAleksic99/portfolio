@@ -1,0 +1,71 @@
+---
+interface Props {
+  title: string;
+  url: string;
+  lang?: string;
+}
+
+const { title, url, lang = "Typescript" } = Astro.props;
+---
+
+<div class="project">
+  <div class="project-language">{lang}</div>
+  <h3>{title}</h3>
+  <p>
+    <slot />
+  </p>
+  <div class="project-buttons">
+    <a href={url} target="_blank" rel="noopener noreferrer">
+      <button type="button">Live link</button>
+    </a>
+  </div>
+</div>
+
+<style>
+  .project {
+    background-color: #647eff;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.3);
+    -webkit-box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.3);
+    -moz-box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding: 1rem;
+  }
+
+  .project-buttons {
+    margin-top: 8px;
+    pointer-events: auto;
+  }
+
+  .project-buttons button {
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 4px 8px;
+    margin-right: 8px;
+  }
+
+  .project-buttons button:hover {
+    transform: scale(1.05);
+  }
+
+  .project-language {
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+
+  @media screen and (min-width: 768px) {
+    .project {
+      padding: 1.5rem;
+    }
+    .project p {
+      font-size: 1.25rem;
+    }
+
+    .project h3 {
+      font-size: 1.5rem;
+    }
+  }
+</style>
